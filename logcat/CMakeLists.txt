@@ -11,7 +11,7 @@ add_definitions("-DLOGGER_LOG_SYSTEM=\"log_system\"")
 
 # Compiler and linker flags
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Os -ffunction-sections -fdata-sections -fomit-frame-pointer -flto")
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -static-libstdc++ -Wl,--gc-sections -flto")
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,--gc-sections -flto")
 
 AUX_SOURCE_DIRECTORY(. SRC_LIST)
 INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/../include)
